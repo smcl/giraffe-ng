@@ -46,7 +46,7 @@ let configureApp (app : IApplicationBuilder) =
   app.UseStaticFiles(
       StaticFileOptions(
               FileProvider = new PhysicalFileProvider(
-                      Path.Combine(Directory.GetCurrentDirectory(), "frontend", "app")),
+                      Path.Combine(Directory.GetCurrentDirectory(), "frontend", "dist")),
                       RequestPath = PathString("/app")))
       .UseGiraffe(webApp)
            
